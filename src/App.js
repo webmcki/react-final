@@ -3,11 +3,7 @@ import Countdown from './cpnts/Countdown'
 
 class App extends Component {
   render() {
-    return (
-      <div>
-        <Countdown />
-      </div>
-    )
+    return <Countdown />
   }
 }
 

@@ -18,13 +18,9 @@ class Countdown extends Component {
       paused: !this.state.paused
     })
     if (!this.state.paused) {
-      clearInterval(this.interval)
+      this.pause()
     } else {
-      this.interval = setInterval(() => {
-        this.setState({
-          duration: this.getRemainingTime()
-        })
-      }, 1000)
+      this.resume()
     }
   }
 
@@ -36,15 +32,23 @@ class Countdown extends Component {
   }
 
   componentDidMount() {
+    this.resume()
+  }
+
+  componentWillUnmount() {
+    this.pause()
+  }
+
+  pause() {
+    clearInterval(this.interval)
+  }
+
+  resume() {
     this.interval = setInterval(() => {
       this.setState({
         duration: this.getRemainingTime()
       })
     }, 1000)
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval)
   }
   render() {
     const {duration} = this.state
@@ -57,41 +61,41 @@ class Countdown extends Component {
               <nav className="level">
                 <div className="level-item has-text-centered">
                   <div>
-                    <p className="heading">Days</p>
                     <p className="title">{Math.floor(duration.asDays())}</p>
+                    <p className="heading">Days</p>
                   </div>
                 </div>
                 <div className="level-item has-text-centered">
                   <div>
-                    <p className="heading">Hours</p>
                     <p className="title">
                       {duration
                         .hours()
                         .toString()
                         .padStart(2, '0')}
                     </p>
+                    <p className="heading">Hours</p>
                   </div>
                 </div>
                 <div className="level-item has-text-centered">
                   <div>
-                    <p className="heading">Minutes</p>
                     <p className="title">
                       {duration
                         .minutes()
                         .toString()
                         .padStart(2, '0')}
                     </p>
+                    <p className="heading">Minutes</p>
                   </div>
                 </div>
                 <div className="level-item has-text-centered">
                   <div>
-                    <p className="heading">Seconds</p>
                     <p className="title">
                       {duration
                         .seconds()
                         .toString()
                         .padStart(2, '0')}
                     </p>
+                    <p className="heading">Seconds</p>
                   </div>
                 </div>
               </nav>
