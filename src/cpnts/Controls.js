@@ -1,16 +1,25 @@
 import React from 'react'
 
-const Controls = (props) => {
+const Controls = ({paused, onPausedToggle}) => {
   return (
-    <div class="field is-grouped">
-      <p class="control">
-        <a class="button is-link">일시정지</a>
+    <div className="field is-grouped is-grouped-centered">
+      <p className="control">
+        <button
+          className="button is-danger is-outlined is-rounded"
+          disabled={paused}
+          onClick={onPausedToggle}
+        >
+          일시정지
+        </button>
       </p>
-      <p class="control">
-        <a class="button">Cancel</a>
-      </p>
-      <p class="control">
-        <a class="button is-danger">계속</a>
+      <p className="control">
+        <button
+          className="button is-success is-outlined is-rounded"
+          disabled={!paused}
+          onClick={onPausedToggle}
+        >
+          계속
+        </button>
       </p>
     </div>
   )
