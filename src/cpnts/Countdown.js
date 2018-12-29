@@ -3,14 +3,11 @@ import moment from 'moment'
 import Controls from './Controls'
 
 class Countdown extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      duration: this.getRemainingTime(),
-      paused: false
-    }
-    this.togglePaused = this.togglePaused.bind(this)
+  state = {
+    duration: this.getRemainingTime(),
+    paused: false
   }
+  togglePaused = this.togglePaused.bind(this)
 
   togglePaused() {
     // console.log('클릭')
