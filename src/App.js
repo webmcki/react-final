@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Countdown from './cpnts/Countdown'
+import Countdown from './cpnts/timer'
 
 class App extends Component {
   render() {
