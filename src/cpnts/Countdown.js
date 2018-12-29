@@ -53,7 +53,7 @@ class Countdown extends Component {
       <section className="hero is-dark is-bold is-fullheight has-text-centered">
         <div className="hero-body">
           <div className="container">
-            <h1 className="title">새해가 곧 옵니다!</h1>
+            <h1 className="title">2019년이 오기까지...</h1>
             <section className="section">
               <nav className="level">
                 <div className="level-item has-text-centered">
