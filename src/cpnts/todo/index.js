@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
 import Todos from './Todos'
+import Add from './Add'
 
 export default class index extends Component {
   state = {
-    todos: [{id: 1, content: '컨텐츠1'}, {id: 2, content: '컨텐츠2'}]
+    todos: []
   }
   deleteTodo = (id) => {
     const todos = this.state.todos.filter((todo) => {
@@ -13,7 +14,19 @@ export default class index extends Component {
       todos
     })
   }
+  addTodo = (todo) => {
+    todo.id = Math.random()
+    let todos = [...this.state.todos, todo]
+    this.setState({
+      todos
+    })
+  }
   render() {
-    return <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
+    return (
+      <div>
+        <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
+        <Add addTodo={this.addTodo} />
+      </div>
+    )
   }
 }
