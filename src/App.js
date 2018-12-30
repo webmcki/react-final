@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
-import Timer from './cpnts/timer'
+// import Timer from './cpnts/timer'
+import PropsTest from './cpnts/propstest'
 
 class App extends Component {
   render() {
-    return <Timer />
+    return <PropsTest />
   }
 }
 
