@@ -10,7 +10,7 @@ export default class index extends Component {
       return todo.id !== id
     })
     this.setState({
-      todos: todos
+      todos
     })
   }
   render() {
