@@ -1,11 +1,10 @@
 import React, {Component} from 'react'
-import RouterLink from './routerlink'
-
+import Navbar from './Navbar'
 export default class index extends Component {
   render() {
     return (
       <div>
-        <RouterLink />
+        <Navbar />
       </div>
     )
   }
