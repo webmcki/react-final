@@ -3,9 +3,10 @@ import {Link, NavLink, withRouter} from 'react-router-dom'
 
 const Navbar = (props) => {
   // console.log(props)
-  setTimeout(() => {
-    props.history.push('/')
-  }, 2000)
+  // withRouter는 Higher Order Components(HOC)
+  // setTimeout(() => {
+  //   props.history.push('/')
+  // }, 2000)
   return (
     <div>
       <ul>
