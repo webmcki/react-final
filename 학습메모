@@ -6,3 +6,4 @@ yarn add react-router-dom
 라우터에서 component는 소문자
 a href 대신 Link 태그를 쓰는 이유는 리플레이시 방지
 Link 태그 대신 NavLink를 쓰는 이유는 active 추가됨
+yarn add axios

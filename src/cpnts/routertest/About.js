@@ -3,7 +3,7 @@ import Rainbow from '../hoc/Rainbow'
 
 const About = () => {
   return (
-    <div>
+    <div className="center">
       <p>About</p>
     </div>
   )
