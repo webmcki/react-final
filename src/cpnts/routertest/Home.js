@@ -21,7 +21,7 @@ export default class Home extends Component {
         return (
           <div key={post.id}>
             <div>
-              <Link to={'./' + post.id}>
+              <Link to={'/' + post.id}>
                 <span>{post.title}</span>
               </Link>
             </div>
