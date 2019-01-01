@@ -4,6 +4,8 @@ import Navbar from './Navbar'
 import Home from './Home'
 import Contact from './Contact'
 import About from './About'
+import Post from './Post'
+
 export default class index extends Component {
   render() {
     return (
@@ -13,6 +15,7 @@ export default class index extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
+          <Route path="/:post_id" component={Post} />
         </div>
       </BrowserRouter>
     )
