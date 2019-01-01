@@ -9,3 +9,4 @@ Link 태그 대신 NavLink를 쓰는 이유는 active 추가됨
 yarn add axios
 netlify에서 링크에러 해결
 빌드폴더에 _redirects 파일생성  /*    /index.html   200
+라우터에 Switch 태그를 적용하면 해당 URL만 표시 즉 해당 컴포넌트만 로드됨
