@@ -25,7 +25,7 @@ class Post extends Component {
       </div>
     ) : (
       <div>
-        <h4>글이 없습니다</h4>
+        <h4>.</h4>
       </div>
     )
 

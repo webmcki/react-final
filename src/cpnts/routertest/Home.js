@@ -33,7 +33,7 @@ export default class Home extends Component {
         )
       })
     ) : (
-      <div>게시물이 없음</div>
+      <div>.</div>
     )
     return <div>{postList}</div>
   }
