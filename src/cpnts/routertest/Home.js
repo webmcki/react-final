@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import AccountBox from '../pokeball.svg'
 
 export default class Home extends Component {
   state = {
@@ -22,6 +23,7 @@ export default class Home extends Component {
           <div key={post.id}>
             <div>
               <Link to={'/' + post.id}>
+                <img src={AccountBox} alt="이미지" />
                 <span>{post.title}</span>
               </Link>
             </div>
